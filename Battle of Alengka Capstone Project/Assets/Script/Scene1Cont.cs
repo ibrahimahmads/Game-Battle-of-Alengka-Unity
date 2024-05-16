@@ -6,8 +6,6 @@ public class Scene1Cont : MonoBehaviour
 {
     public Transform playerSpawnPointRight;
     public Transform playerSpawnPointFirst;
-
-
     void Start()
     {
         if (GameManager.instance.spawnPointDirection == "right")
@@ -22,8 +20,5 @@ public class Scene1Cont : MonoBehaviour
             //GameObject.FindGameObjectWithTag("Player").transform.position = playerSpawnPointLeft.position;
             GameManager.instance.RespawnPlayer();
         }
-
-
-
     }
 }
