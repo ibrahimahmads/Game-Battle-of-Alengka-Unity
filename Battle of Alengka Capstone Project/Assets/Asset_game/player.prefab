@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0388833df631e7941b14862d2b0d8dd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7.5
+  speed: 5
   isgrounded: 0
   jumpPower: 10
   groundlayer:
@@ -278,7 +278,7 @@ MonoBehaviour:
   mouseP: {x: 0, y: 0, z: 0}
   direction: {x: 0, y: 0, z: 0}
   arrow: {fileID: 6725393935766444940, guid: 9faa735078d172b4bb758262549ab701, type: 3}
-  fixedSpeed: 20
+  fixedSpeed: 10
   arrowSpeed: 0
   maxTimeChrg: 3
   speedModifier: 3
