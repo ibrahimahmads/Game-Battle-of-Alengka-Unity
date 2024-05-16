@@ -32,6 +32,11 @@ public class PauseManager : MonoBehaviour
         SceneManager.LoadScene("MapChapter");
     }
 
+    public void AchievementGame()
+    {
+        SceneManager.LoadScene("Achievement");
+    }
+
     public void ExitGame()
     {
         Application.Quit();
