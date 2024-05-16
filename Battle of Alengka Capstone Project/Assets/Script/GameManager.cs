@@ -25,13 +25,11 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(int sceneIndex)
     {
-        SceneManager.LoadScene(sceneIndex);
-        
+        SceneManager.LoadScene(sceneIndex); 
     }
 
     public void RespawnPlayer()
     {
-        
         //GameObject.FindGameObjectWithTag("Player").transform.position = playerSpawnPoint.position;
         Instantiate(Player, playerSpawnPoint.position, Quaternion.identity);
     }
