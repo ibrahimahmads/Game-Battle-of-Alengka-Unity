@@ -278,7 +278,7 @@ MonoBehaviour:
   mouseP: {x: 0, y: 0, z: 0}
   direction: {x: 0, y: 0, z: 0}
   arrow: {fileID: 6725393935766444940, guid: 9faa735078d172b4bb758262549ab701, type: 3}
-  fixedSpeed: 10
+  fixedSpeed: 20
   arrowSpeed: 0
   maxTimeChrg: 3
   speedModifier: 3
