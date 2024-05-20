@@ -39,16 +39,12 @@ public class ShootCont : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
            chrg = true;
-            
-
         }
         else if (Input.GetButtonUp("Fire1"))
         {
             Shoot();
             chrg = false;
             timeChrg = 0;
-            
-
         }
         
     }
