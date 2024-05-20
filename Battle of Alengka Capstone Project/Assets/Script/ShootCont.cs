@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Security;
 using UnityEngine;
 
 public class ShootCont : MonoBehaviour
@@ -13,13 +14,15 @@ public class ShootCont : MonoBehaviour
     public float maxTimeChrg;
     public float speedModifier;
     public float timeChrg =0;
+    public float cdAttack;
+    float currentCD;
     public bool chrg;
 
     // Start is called before the first frame update
     void Start()
     {
         pointCont = FindAnyObjectByType<PointerCont>();
-        arrowSpeed = fixedSpeed;
+        currentCD = 0;
     }
 
     // Update is called once per frame
@@ -27,11 +30,19 @@ public class ShootCont : MonoBehaviour
     {
         Charging();
         Attack();
+        
     }
 
 
     public void Attack()
     {
+        if (currentCD > 0)
+        {
+            currentCD -= Time.deltaTime;
+        }
+        else
+        {
+
         if (chrg == false)
         {
             arrowSpeed = fixedSpeed;
@@ -39,7 +50,7 @@ public class ShootCont : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
            chrg = true;
-            
+           
 
         }
         else if (Input.GetButtonUp("Fire1"))
@@ -47,8 +58,10 @@ public class ShootCont : MonoBehaviour
             Shoot();
             chrg = false;
             timeChrg = 0;
-            
+            currentCD = cdAttack;
 
+
+        }
         }
         
     }
