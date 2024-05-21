@@ -40,8 +40,7 @@ public class ShootCont : MonoBehaviour
         {
             currentCD -= Time.deltaTime;
         }
-        else
-        {
+        else{
 
         if (chrg == false)
         {
@@ -50,8 +49,6 @@ public class ShootCont : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
            chrg = true;
-           
-
         }
         else if (Input.GetButtonUp("Fire1"))
         {
@@ -59,8 +56,6 @@ public class ShootCont : MonoBehaviour
             chrg = false;
             timeChrg = 0;
             currentCD = cdAttack;
-
-
         }
         }
         
