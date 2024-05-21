@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7436368829344807019}
   - component: {fileID: 8775064212844193196}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 6779959376095638045}
   - component: {fileID: 2699207602129376342}
   - component: {fileID: 4579818049757251382}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -283,6 +283,7 @@ MonoBehaviour:
   maxTimeChrg: 3
   speedModifier: 3
   timeChrg: 0
+  cdAttack: 1
   chrg: 0
 --- !u!1 &6832236992805831408
 GameObject:
@@ -294,7 +295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7565082376964322761}
   - component: {fileID: 5068105779166770018}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pointer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
