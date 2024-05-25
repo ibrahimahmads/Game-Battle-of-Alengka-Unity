@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyPatrol : MonoBehaviour
 {
-    public float speed = 2f;
+    EnemyStat stat;
     public float patrolDistance = 5f;
     public float delayTime = 2f;  // Durasi delay
 
@@ -16,6 +16,7 @@ public class EnemyPatrol : MonoBehaviour
     void Start()
     {
         startPosition = transform.position;
+        stat = GetComponent<EnemyStat>();
         animator = GetComponent<Animator>();
     }
 
@@ -31,7 +32,7 @@ public class EnemyPatrol : MonoBehaviour
     {
         if (movingRight)
         {
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
+            transform.Translate(Vector2.right * stat.speed * Time.deltaTime);
             animator.SetBool("isWalking", true);
             if (Vector2.Distance(startPosition, transform.position) >= patrolDistance)
             {
@@ -40,7 +41,7 @@ public class EnemyPatrol : MonoBehaviour
         }
         else
         {
-            transform.Translate(Vector2.left * speed * Time.deltaTime);
+            transform.Translate(Vector2.left * stat.speed * Time.deltaTime);
             animator.SetBool("isWalking", true);
             if (Vector2.Distance(startPosition, transform.position) >= patrolDistance)
             {
