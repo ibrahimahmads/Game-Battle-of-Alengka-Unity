@@ -9,6 +9,7 @@ public class ArrowCont : MonoBehaviour
     Vector3 dir;
     Vector3 direction;
     Rigidbody2D rb;
+    public int damage;
 
 
     // Start is called before the first frame update
@@ -21,7 +22,7 @@ public class ArrowCont : MonoBehaviour
     }
     private void Awake()
     {
-        
+
         Destroy(gameObject, 10);
     }
     // Update is called once per frame
@@ -30,7 +31,7 @@ public class ArrowCont : MonoBehaviour
         //transform.position += direction * arrowSpeed * Time.deltaTime;
         CheckAngle();
     }
-   
+
     public void DirectionCheck(Vector3 mouseP)
     {
 
@@ -40,10 +41,7 @@ public class ArrowCont : MonoBehaviour
         direction = new Vector3(dir.x, dir.y).normalized;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Destroy(gameObject);
-    }
+
 
     void CheckAngle()
     {
@@ -51,6 +49,15 @@ public class ArrowCont : MonoBehaviour
         float angle = Mathf.Atan2(direcction.y, direcction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            EnemyStat enemy = collision.gameObject.GetComponent<EnemyStat>();
+            enemy.TakeDamage(damage);
+            
+        }
+        Destroy(gameObject);
+    }
 
 }

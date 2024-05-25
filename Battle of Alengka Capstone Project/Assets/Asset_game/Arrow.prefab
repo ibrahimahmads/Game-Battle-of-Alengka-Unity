@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -3833921341242993792}
   - component: {fileID: 371252913099150813}
   - component: {fileID: 924152855826314399}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 130d14c35b89ce54aa425464738c06d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
 --- !u!50 &371252913099150813
 Rigidbody2D:
   serializedVersion: 4
