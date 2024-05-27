@@ -29,7 +29,7 @@ public class PauseManager : MonoBehaviour
     public void PlayGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MapChapter");
+        SceneManager.LoadScene("Cutscene");
     }
 
     public void AchievementGame()

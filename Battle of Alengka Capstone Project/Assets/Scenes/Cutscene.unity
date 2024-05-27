@@ -156,7 +156,7 @@ VideoPlayer:
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_AspectRatio: 2
   m_DataSource: 0
   m_TimeUpdateMode: 2
@@ -373,7 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec6e31c24a93217429e0d2c5752df936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetScene: MainMenu
+  TargetScene: MapChapter
   Delay: 45
 --- !u!1 &1085651257
 GameObject:

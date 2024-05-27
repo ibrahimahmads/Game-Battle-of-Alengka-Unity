@@ -383,6 +383,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Enemy ijo '
       objectReference: {fileID: 0}
+    - target: {fileID: 7251220824832963686, guid: b89402c1e109b9c49b506404b1392f41, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251220824832963686, guid: b89402c1e109b9c49b506404b1392f41, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251220824832963686, guid: b89402c1e109b9c49b506404b1392f41, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 113368471
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -876,6 +888,14 @@ PrefabInstance:
     - target: {fileID: 3312316176999001679, guid: b89402c1e109b9c49b506404b1392f41, type: 3}
       propertyPath: m_Name
       value: Enemy ijo  (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251220824832963686, guid: b89402c1e109b9c49b506404b1392f41, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251220824832963686, guid: b89402c1e109b9c49b506404b1392f41, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 113368471
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2981,8 +3001,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -43, y: -43}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -5.8548, y: -4.5}
+  m_SizeDelta: {x: 11.7097, y: 11.9123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1014852300
 MonoBehaviour:
@@ -3292,6 +3312,14 @@ PrefabInstance:
     - target: {fileID: 3312316176999001679, guid: b89402c1e109b9c49b506404b1392f41, type: 3}
       propertyPath: m_Name
       value: Enemy ijo  (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251220824832963686, guid: b89402c1e109b9c49b506404b1392f41, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251220824832963686, guid: b89402c1e109b9c49b506404b1392f41, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 113368471
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7939,6 +7967,14 @@ PrefabInstance:
     - target: {fileID: 3312316176999001679, guid: b89402c1e109b9c49b506404b1392f41, type: 3}
       propertyPath: m_Name
       value: Enemy ijo  (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251220824832963686, guid: b89402c1e109b9c49b506404b1392f41, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251220824832963686, guid: b89402c1e109b9c49b506404b1392f41, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 113368471
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16803,6 +16839,14 @@ PrefabInstance:
     - target: {fileID: 3312316176999001679, guid: b89402c1e109b9c49b506404b1392f41, type: 3}
       propertyPath: m_Name
       value: Enemy ijo  (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251220824832963686, guid: b89402c1e109b9c49b506404b1392f41, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251220824832963686, guid: b89402c1e109b9c49b506404b1392f41, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 113368471
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
