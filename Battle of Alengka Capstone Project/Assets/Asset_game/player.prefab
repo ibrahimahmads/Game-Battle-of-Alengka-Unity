@@ -980,7 +980,7 @@ MonoBehaviour:
   groundlayer:
     serializedVersion: 2
     m_Bits: 64
-  distanceGr: 0
+  distanceGr: 2
 --- !u!114 &4579818049757251382
 MonoBehaviour:
   m_ObjectHideFlags: 0
