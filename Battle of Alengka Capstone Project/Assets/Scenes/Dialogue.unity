@@ -314,14 +314,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueSegments:
-  - Speaker: {fileID: 11400000, guid: 947fd803d8b5f29408cd9ae25b32cd32, type: 2}
-    Dialogue: Haloo aku ramaa
+  - Speaker: {fileID: 11400000, guid: 10443faf12542e6468240e5503ebec1f, type: 2}
+    Dialogue: '" Terimakasih telah membantu kami untuk membunuh raksasi tataka"'
   - Speaker: {fileID: 11400000, guid: 66039415005c2154b8cec11016596790, type: 2}
     Dialogue: Anjaee guaa kijangg
+  - Speaker: {fileID: 11400000, guid: 44d3e6174a730544f95055181cd829ba, type: 2}
+    Dialogue: ramapun melangsungkan perjalanannya ke kota mitila untuk mengikuti
+      sayembara ditemani oleh laksamana. Sesampainya disana ia berhasil memangkan
+      sayembara tersebut dan dihadiahkan dewi sita untuk menjadi permaisurinya. Dewi
+      sitapun mengikuti sri rama untuk tinggal di kerajaan kosala...
   SpeakerFace: {fileID: 378220514}
   DisBorderColor: {fileID: 1052747772}
   DisInnerBorder: {fileID: 1904505351}
-  SkipIndicator: {fileID: 0}
+  SkipIndicator: {fileID: 822576238}
   SpeakerName: {fileID: 760439816}
   DialogueDis: {fileID: 1566771092}
   TextSpeed: 25
