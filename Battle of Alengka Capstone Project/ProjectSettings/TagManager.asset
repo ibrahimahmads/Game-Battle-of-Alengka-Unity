@@ -51,3 +51,6 @@ TagManager:
   - name: ForeGround
     uniqueID: 1704950191
     locked: 0
+  - name: Boss
+    uniqueID: 3193806175
+    locked: 0
