@@ -23,8 +23,8 @@ public class SpikeTrig : MonoBehaviour
 
         if (collision.CompareTag("Player"))
         {
-            Vector3 position = new Vector3(transform.position.x +3, transform.position.y, transform.position.z);
-            Vector3 position2 = new Vector3(transform.position.x + 5, transform.position.y, transform.position.z);
+            Vector3 position = new Vector3(transform.position.x +3, transform.position.y -0.5f, transform.position.z);
+            Vector3 position2 = new Vector3(transform.position.x + 5, transform.position.y -0.5f, transform.position.z);
             Instantiate(spike, position , Quaternion.identity);
             Instantiate(spike, position2, Quaternion.identity);
         }
