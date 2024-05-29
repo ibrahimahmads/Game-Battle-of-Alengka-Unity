@@ -41,4 +41,9 @@ public class PauseManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void MapChapter()
+    {
+        SceneManager.LoadScene("MapChapter");
+    }
 }
