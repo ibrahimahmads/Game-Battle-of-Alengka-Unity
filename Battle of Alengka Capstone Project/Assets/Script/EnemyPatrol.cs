@@ -12,6 +12,7 @@ public class EnemyPatrol : MonoBehaviour
     private bool movingRight = false;
     private bool isWaiting = false; // Apakah sedang menunggu
     private Animator animator;
+    private bool isPaused = false;
 
     void Start()
     {
@@ -22,7 +23,7 @@ public class EnemyPatrol : MonoBehaviour
 
     void Update()
     {
-        if (!isWaiting)
+        if (!isWaiting && !isPaused)
         {
             Patrol();
         }
@@ -75,5 +76,16 @@ public class EnemyPatrol : MonoBehaviour
             localScale.x = Mathf.Abs(localScale.x); // Menghadap ke kiri
         }
         transform.localScale = localScale;
+    }
+
+    public void PausePatrol()
+    {
+        isPaused = true;
+        animator.SetBool("isWalking", false); // Menghentikan animasi berjalan
+    }
+
+    public void ResumePatrol()
+    {
+        isPaused = false;
     }
 }

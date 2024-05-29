@@ -12,8 +12,6 @@ public class ShootCont : MonoBehaviour
     public GameObject arrow;
   
     public float arrowSpeed;
-
-
     public float timeChrg =0;
 
     float currentCD;
