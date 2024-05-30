@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 991564997093963488}
   - component: {fileID: 1625288904319390059}
   - component: {fileID: 3455706508543384042}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 'Enemy ijo '
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -216,6 +216,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrolDistance: 5
   delayTime: 2
+  detectionRange: 5
+  attackRange: 1
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &3455706508543384042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,3 +236,6 @@ MonoBehaviour:
   health: 10
   damage: 2
   speed: 3
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
