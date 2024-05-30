@@ -316,13 +316,14 @@ MonoBehaviour:
   DialogueSegments:
   - Speaker: {fileID: 11400000, guid: 10443faf12542e6468240e5503ebec1f, type: 2}
     Dialogue: '" Terimakasih telah membantu kami untuk membunuh raksasi tataka"'
-  - Speaker: {fileID: 11400000, guid: 66039415005c2154b8cec11016596790, type: 2}
-    Dialogue: Anjaee guaa kijangg
-  - Speaker: {fileID: 11400000, guid: 44d3e6174a730544f95055181cd829ba, type: 2}
-    Dialogue: ramapun melangsungkan perjalanannya ke kota mitila untuk mengikuti
-      sayembara ditemani oleh laksamana. Sesampainya disana ia berhasil memangkan
-      sayembara tersebut dan dihadiahkan dewi sita untuk menjadi permaisurinya. Dewi
-      sitapun mengikuti sri rama untuk tinggal di kerajaan kosala...
+  - Speaker: {fileID: 11400000, guid: c540ee12c04f7a34ea32a3c61d23a3d4, type: 2}
+    Dialogue: '"Sama - sama , Selanjutnya apa yang harus ku lakukan wahai parabetapa?"'
+  - Speaker: {fileID: 11400000, guid: 10443faf12542e6468240e5503ebec1f, type: 2}
+    Dialogue: "\" pergilah ke mitila ibu kata dari kerajaan wideha yang dipimpin
+      oleh Raja janaka ,  \t    beliau sedang membuat sayembara... ikutlah engkau
+      sayembara tersebut\""
+  - Speaker: {fileID: 11400000, guid: c540ee12c04f7a34ea32a3c61d23a3d4, type: 2}
+    Dialogue: '" Baik parabetapa "'
   SpeakerFace: {fileID: 378220514}
   DisBorderColor: {fileID: 1052747772}
   DisInnerBorder: {fileID: 1904505351}
