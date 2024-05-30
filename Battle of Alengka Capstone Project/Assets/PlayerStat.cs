@@ -19,6 +19,7 @@ public class PlayerStat : MonoBehaviour
     public float invincibilityDur;
     float currentInvincibility;
     bool isInvincible;
+    public GameOverManager gameOverManager;
 
     private void Start()
     {
@@ -46,6 +47,7 @@ public class PlayerStat : MonoBehaviour
     public void Kill()
     {
         Debug.Log("die");
+        gameOverManager.ShowGameOver();
         Destroy(gameObject);
     }
 
