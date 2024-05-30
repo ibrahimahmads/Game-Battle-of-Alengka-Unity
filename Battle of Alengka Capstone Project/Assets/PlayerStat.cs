@@ -45,6 +45,7 @@ public class PlayerStat : MonoBehaviour
     }
     public void Kill()
     {
+        Debug.Log("die");
         Destroy(gameObject);
     }
 

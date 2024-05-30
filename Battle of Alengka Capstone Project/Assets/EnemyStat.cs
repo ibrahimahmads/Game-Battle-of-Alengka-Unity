@@ -9,8 +9,9 @@ public class EnemyStat : MonoBehaviour
     public int speed;
     private Animator animator;
     private bool isTakingDamage = false; // Flag untuk mengecek apakah sedang dalam keadaan terkena serangan
-    private bool isDead = false;
     private EnemyPatrol enemyPatrol;
+    public LayerMask playerLayer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,7 +64,6 @@ public class EnemyStat : MonoBehaviour
 
     public void Kill()
     {
-        isDead = true; // Set flag isDead menjadi true
         if (animator != null)
         {
             animator.SetTrigger("Die");
@@ -96,11 +96,13 @@ public class EnemyStat : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
-        if(collision.gameObject.tag == "Player")
+        if (((1 << collision.gameObject.layer) & playerLayer) != 0)
         {
             PlayerStat player = collision.gameObject.GetComponent<PlayerStat>();
-            player.TakeDamage(damage);
+            if (player != null)
+            {
+                player.TakeDamage(damage);
+            }
         }
     }
 }

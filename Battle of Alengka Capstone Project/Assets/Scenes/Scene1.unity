@@ -331,6 +331,22 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1625288904319390059, guid: b89402c1e109b9c49b506404b1392f41, type: 3}
+      propertyPath: attackRange
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625288904319390059, guid: b89402c1e109b9c49b506404b1392f41, type: 3}
+      propertyPath: detectionRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625288904319390059, guid: b89402c1e109b9c49b506404b1392f41, type: 3}
+      propertyPath: patrolDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1625288904319390059, guid: b89402c1e109b9c49b506404b1392f41, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 6082821151322044943, guid: b2dec2d7ecc8da14fa7f108dbf5bd859, type: 3}
     - target: {fileID: 2349872728824509912, guid: b89402c1e109b9c49b506404b1392f41, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.11350957
@@ -341,7 +357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2349872728824509912, guid: b89402c1e109b9c49b506404b1392f41, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41.546
+      value: -37.5
       objectReference: {fileID: 0}
     - target: {fileID: 2349872728824509912, guid: b89402c1e109b9c49b506404b1392f41, type: 3}
       propertyPath: m_LocalPosition.y
