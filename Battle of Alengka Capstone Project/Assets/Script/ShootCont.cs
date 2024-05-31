@@ -13,8 +13,6 @@ public class ShootCont : MonoBehaviour
      public Transform Bow;
   
     public float arrowSpeed;
-
-
     public float timeChrg =0;
 
     float currentCD;
