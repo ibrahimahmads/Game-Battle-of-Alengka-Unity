@@ -35,6 +35,11 @@ public class FireballCont : MonoBehaviour
             Destroy(gameObject);
 
         }
+        else if(collision.gameObject.tag == "Arrow")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
        
     }
 }

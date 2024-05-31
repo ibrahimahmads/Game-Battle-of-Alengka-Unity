@@ -6,7 +6,6 @@ using UnityEngine;
 public class Player_Mov : MonoBehaviour
 {
     PlayerStat stat;
-    PointerCont pointCont;
     Rigidbody2D rb;
     float moveX;
     Vector2 move;
@@ -23,7 +22,6 @@ public class Player_Mov : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         stat = GetComponent<PlayerStat>();
-        pointCont = FindFirstObjectByType<PointerCont>();
     }
 
     // Update is called once per frame
@@ -61,7 +59,7 @@ public class Player_Mov : MonoBehaviour
 
     Vector3 MouseCheck()
     {
-       Vector3 mouseP = pointCont.mousePos;
+       Vector3 mouseP = stat.mousePos;
         return mouseP;
     }
 
@@ -70,13 +68,13 @@ public class Player_Mov : MonoBehaviour
         Vector3 localScale = transform.localScale;
         if (direct.x > transform.position.x)
         {
-            localScale.x = -Mathf.Abs(localScale.x);
+            localScale.x = Mathf.Abs(localScale.x);
             
             
         }
         else
         {
-            localScale.x = Mathf.Abs(localScale.x);
+            localScale.x = -Mathf.Abs(localScale.x);
         }
         transform.localScale = localScale;
     }
