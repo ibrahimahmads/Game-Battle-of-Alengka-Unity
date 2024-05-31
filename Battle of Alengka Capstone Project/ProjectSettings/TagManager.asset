@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Spike
   - Achievement
+  - Arrow
   layers:
   - Default
   - TransparentFX

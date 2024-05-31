@@ -16,7 +16,7 @@ public class PointerCont : MonoBehaviour
         Player = GameObject.FindWithTag("Player");
     }
 
-    // Update is called once per frame
+    // Update is called once per frames
     void Update()
     {
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);

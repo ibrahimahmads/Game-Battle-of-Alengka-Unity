@@ -11,7 +11,7 @@ public class PlayerStat : MonoBehaviour
     public float cdAttack;
     public float arrowFixedSpeed;
     public float maxTimeChrg;
-    public float speedModifier;
+    public float maxArrowSpeed;
 
     [Header("I-frame")]
     SpriteRenderer color;
@@ -21,14 +21,20 @@ public class PlayerStat : MonoBehaviour
     bool isInvincible;
     public GameOverManager gameOverManager;
 
+    private Camera mainCam;
+    public Vector3 mousePos;
+    private Vector3 dir;
+
     private void Start()
     {
         color = GetComponent<SpriteRenderer>();
         originalColor = color.color;
+        mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
     private void Update()
     {
         Invincible();
+        MouseCheck();
     }
     public void TakeDamage(int damage)
     {
@@ -86,6 +92,14 @@ public class PlayerStat : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+    }
+
+    void MouseCheck()
+    {
+        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        dir = mousePos - transform.position;
+        float rotZ = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.localScale = gameObject.transform.localScale;
     }
 
 }
