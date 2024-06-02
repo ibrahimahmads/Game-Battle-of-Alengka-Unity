@@ -12,10 +12,7 @@ public class Player_Mov : MonoBehaviour
     public bool isgrounded;
     public LayerMask groundlayer;
     public float distanceGr;
-
     Animator animator;  
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +20,6 @@ public class Player_Mov : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         stat = GetComponent<PlayerStat>();
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -39,18 +35,15 @@ public class Player_Mov : MonoBehaviour
         moveX = Input.GetAxisRaw("Horizontal");
         move = new Vector2(moveX, 0);
 
-        rb.velocity = move * stat.speed;
+         transform.Translate(move * Time.deltaTime * stat.speed);
     }
 
     void Jump()
     {
-        if (isgrounded)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && isgrounded == true)
             {
                 rb.velocity = new Vector2(0, 1) * stat.jumpPower;
             }
-        }
     }
     void GroundCheck()
     {
@@ -69,8 +62,6 @@ public class Player_Mov : MonoBehaviour
         if (direct.x > transform.position.x)
         {
             localScale.x = Mathf.Abs(localScale.x);
-            
-            
         }
         else
         {
@@ -82,7 +73,6 @@ public class Player_Mov : MonoBehaviour
     void Animation()
     {
         animator.SetFloat("Moving", Mathf.Abs( moveX));
-        animator.SetFloat("VelVal", rb.velocity.y);
+        animator.SetBool("OnGround", isgrounded);
     }
-
 }

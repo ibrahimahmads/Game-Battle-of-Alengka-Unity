@@ -10,31 +10,24 @@ public class ShootCont : MonoBehaviour
 
     PlayerStat stat;
     public GameObject arrow;
-     public Transform Bow;
-  
+    public Transform Bow;
     public float arrowSpeed;
-    public float timeChrg =0;
-
+    public float timeChrg =0.0f;
     float currentCD;
-    public bool chrg;
+    private bool chrg = false;
+    private bool att = false;
     Animator animator;
-
     // Start is called before the first frame update
     void Start()
     {
-        
         currentCD = 0;
         stat = GetComponent<PlayerStat>();
         animator = GetComponent<Animator>();
-        
     }
-
     // Update is called once per frame
     void Update()
-    {
-       
+    { 
         Attack();
-
     }
 
     void Attack()
@@ -46,16 +39,35 @@ public class ShootCont : MonoBehaviour
             {
                 StartCharging();
             }
-            else if (Input.GetButton("Fire1"))
+            if (Input.GetButton("Fire1") && chrg)
             {
                 Charging();
             }
-            else if (Input.GetButtonUp("Fire1"))
+            if (Input.GetButtonUp("Fire1"))
             {
-                ExecuteAttack();
+                if(chrg)
+                {
+                    att = true;
+                    animator.SetTrigger("LepasPanah");
+                }
+                chrg = false;
+                animator.SetBool("TahanPanah", false);
+                animator.SetBool("TahanPanahMove", false);
+            }
+
+            if(att)
+            {
+                if(timeChrg>= 1)
+                {
+                    ChargedAtt();
+                }else{
+                    RegularShoot();
+                }
+
+                att = false;
+                currentCD = stat.cdAttack;
             }
         }
-        
     }
 
     void StartCharging()
@@ -63,169 +75,77 @@ public class ShootCont : MonoBehaviour
         timeChrg = 0f;
         chrg = true;
         arrowSpeed = stat.arrowFixedSpeed;
-
-        animator.SetTrigger("StartAnimation1");
-        
-
+        animator.SetTrigger("TakeBow");
     }
 
     void Charging()
     {
-        if(chrg == true)
-        {
-            timeChrg += Time.deltaTime;
+        timeChrg += Time.deltaTime;
             
-            if (timeChrg > stat.maxTimeChrg)
-            {
-                timeChrg = stat.maxTimeChrg;
-            }
-            animator.SetBool("Charge", true);
+        if (timeChrg > stat.maxTimeChrg)
+        {
+            timeChrg = stat.maxTimeChrg;
         }
-       
+        animator.SetBool("TahanPanah", true);
     }
 
-    void ExecuteAttack()
+    void RegularShoot()
     {
-        chrg = false;
-        arrowSpeed = Mathf.Lerp(stat.arrowFixedSpeed,stat.maxArrowSpeed,timeChrg/stat.maxTimeChrg);
-        animator.SetBool("Charge", false);
-        animator.SetTrigger("BowRelease");
+        FireArrow(stat.arrowFixedSpeed);
     }
 
-
-    public void Shoot()
+    void ChargedAtt()
     {
-        
-        GameObject SpwndArrow = Instantiate(arrow, Bow.position, Quaternion.identity);
-        SpwndArrow.GetComponent<ArrowCont>().DirectionCheck(MouseCheck());
-        
+        FireArrow(stat.arrowFixedSpeed*2);
     }
 
+    void FireArrow(float speed)
+    {
+        if (arrow != null && Bow != null)
+        {
+            GameObject newArrow = Instantiate(arrow, Bow.position, Quaternion.identity);
+            ArrowCont arrowCont = newArrow.GetComponent<ArrowCont>();
+            if (arrowCont != null)
+            {
+                arrowCont.Initialize(MouseCheck(), speed);
+            }
+            // Tambahkan kecepatan ke anak panah
+            Rigidbody2D rb = newArrow.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                 if (transform.localScale.x > 0) // Character is facing right
+                {
+                    rb.velocity = transform.right * speed; // Untuk arah ke kanan
+                }
+                else 
+                {
+                    rb.velocity = -transform.right * speed; // Untuk arah ke kiri
+                }
+            }
+        }
+    }
     Vector3 MouseCheck()
     {
         Vector3 mouseP = stat.mousePos;
         return mouseP;
     }
 
-
+    void UpdateMovementAnimation()
+    {
+        if (chrg)
+        {
+            if (animator != null)
+            {
+                if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+                {
+                    animator.SetBool("TahanPanahMove", true);
+                }
+                else
+                {
+                    animator.SetBool("TahanPanahMove", false);
+                }
+            }
+        }
+    }
 
 }
-//void Update()
-//{
-//    Attack();
-//}
-
-//void Attack()
-//{
-//    if (Input.GetButtonDown("Fire1"))
-//    {
-//        StartCharging();
-//    }
-//    if (Input.GetButton("Fire1"))
-//    {
-//        ContinueCharging();
-//    }
-//    if (Input.GetButtonUp("Fire1"))
-//    {
-//        ExecuteAttack();
-//    }
-//}
-
-//void StartCharging()
-//{
-//    isCharging = true;
-//    chargingTime = 0.0f;
-//}
-
-//void ContinueCharging()
-//{
-//    if (isCharging)
-//    {
-//        chargingTime += Time.deltaTime;
-//        if (chargingTime > maxChargeTime)
-//        {
-//            chargingTime = maxChargeTime;
-//        }
-//    }
-//}
-
-//void ExecuteAttack()
-//{
-//    if (isCharging)
-//    {
-//        isCharging = false;
-
-//    }
-//}
-
-//void PerformAttack(float power)
-//{
-
-//}
-//} 
-
-//public void Attack()
-//{
-//    if (currentCD > 0)
-//    {
-//        currentCD -= Time.deltaTime;
-//    }
-//    else{
-
-//    if (chrg == false)
-//    {
-//        arrowSpeed = stat.arrowFixedSpeed;
-//        if (Input.GetMouseButtonDown(0))
-//        {
-//          chrg = true;
-//          animator.SetTrigger("StartAnimation1");
-//        }
-
-//    }
-
-//        else if (Input.GetButtonUp("Fire1"))
-//        {
-//            Invoke(nameof(Shoot), 0.5f);
-//            chrg = false;
-//            timeChrg = 0;
-//            currentCD = stat.cdAttack;
-//            animator.SetFloat("PressDuration", timeChrg);
-//            animator.SetBool("LoopAnimation2", false);
-//            if (timeChrg < 0.5)
-//            {
-//                animator.SetBool("Animation1Completed", true);
-//            }
-
-
-
-//        }
-
-//    }
-
-//}
-
-//void Charging()
-//{
-
-//    if (chrg)
-//    {
-//        Debug.Log("1");
-//        if (timeChrg < stat.maxTimeChrg)
-//        {
-//            timeChrg += Time.deltaTime;
-//            arrowSpeed += Time.deltaTime * stat.speedModifier;
-//            animator.SetFloat("PressDuration", timeChrg);
-//            animator.SetBool("LoopAnimation2", true);
-//            animator.SetBool("Animation1Completed", false);
-//        }
-//    }
-
-//}
-//void Animation()
-//{
-//    if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player_take_bow") &&
-//           animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.99f)
-//    {
-//        animator.SetBool("Animation1Completed", true);
-//    }
-//}
