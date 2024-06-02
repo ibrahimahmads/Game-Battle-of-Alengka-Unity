@@ -9,6 +9,7 @@ TagManager:
   - Spike
   - Achievement
   - Arrow
+  - Trigger
   layers:
   - Default
   - TransparentFX
