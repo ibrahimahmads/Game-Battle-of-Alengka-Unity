@@ -39,7 +39,7 @@ public class Player_Mov : MonoBehaviour
         moveX = Input.GetAxisRaw("Horizontal");
         move = new Vector2(moveX, 0);
 
-        transform.Translate(move * stat.speed * Time.deltaTime);
+        rb.velocity = move * stat.speed;
     }
 
     void Jump()

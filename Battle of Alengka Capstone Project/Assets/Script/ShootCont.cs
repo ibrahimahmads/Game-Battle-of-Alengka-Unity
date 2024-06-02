@@ -79,6 +79,7 @@ public class ShootCont : MonoBehaviour
             {
                 timeChrg = stat.maxTimeChrg;
             }
+            animator.SetBool("Charge", true);
         }
        
     }
@@ -87,6 +88,7 @@ public class ShootCont : MonoBehaviour
     {
         chrg = false;
         arrowSpeed = Mathf.Lerp(stat.arrowFixedSpeed,stat.maxArrowSpeed,timeChrg/stat.maxTimeChrg);
+        animator.SetBool("Charge", false);
         animator.SetTrigger("BowRelease");
     }
 
