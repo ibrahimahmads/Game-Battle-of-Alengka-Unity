@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 3261446467846030615}
   - component: {fileID: 3470337306351645835}
   - component: {fileID: 6701875697379886646}
-  - component: {fileID: 3971102345225440911}
   - component: {fileID: 6783776377210614993}
+  - component: {fileID: -8165465636494227912}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,22 +134,7 @@ MonoBehaviour:
     m_Bits: 128
   distance: 10
   playerNear: 0
-  fireball_keluar: {fileID: 0}
---- !u!114 &3971102345225440911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4979641259847637143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cf2fe897eee1aa4b9324a0a5306c34d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 20
-  damage: 3
-  speed: 0
+  fireballSpawnPoint: {fileID: 0}
 --- !u!60 &6783776377210614993
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -214,3 +199,21 @@ PolygonCollider2D:
       - {x: 4.6000004, y: -10.2699995}
       - {x: -6.4700003, y: -10}
   m_UseDelaunayMesh: 0
+--- !u!114 &-8165465636494227912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4979641259847637143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d9ce0c55460d542a22287211f3a2f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  damage: 0
+  speed: 0
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0

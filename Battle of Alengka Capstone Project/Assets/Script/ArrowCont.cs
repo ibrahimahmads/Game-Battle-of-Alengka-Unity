@@ -10,7 +10,7 @@ public class ArrowCont : MonoBehaviour
     public int damage;
     private void Awake()
     {
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 0.3f);
     }
     void Update()
     {
@@ -33,6 +33,11 @@ public class ArrowCont : MonoBehaviour
             EnemyStat enemy = collision.gameObject.GetComponent<EnemyStat>();
             enemy.TakeDamage(damage);
             
+        }
+        if (collision.CompareTag("Boss"))
+        {
+            MinibossStat boss = collision.gameObject.GetComponent<MinibossStat>();
+            boss.TakeDamage(damage);
         }
         Destroy(gameObject);
     }

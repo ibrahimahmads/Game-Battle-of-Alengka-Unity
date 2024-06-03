@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyPatrol : MonoBehaviour
 {
     EnemyStat stat;
+    AudioManager audioManager;
     public float patrolDistance = 5f;
     public float delayTime = 2f;  // Durasi delay
     private Transform player;  // Referensi ke transform pemain
@@ -16,9 +17,11 @@ public class EnemyPatrol : MonoBehaviour
     private bool isWaiting = false; // Apakah sedang menunggu
     private Animator animator;
     private bool isPaused = false;
+    private bool isChasing = false;
 
-    void Start()
+    void Awake()
     {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         startPosition = transform.position;
         stat = GetComponent<EnemyStat>();
         animator = GetComponent<Animator>();
@@ -27,11 +30,6 @@ public class EnemyPatrol : MonoBehaviour
         {
             player = playerObject.transform;
         }
-        else
-        {
-            Debug.LogError("Player object not found. Make sure the player object has the 'Player' tag.");
-        }
-        //player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Update()
@@ -47,6 +45,12 @@ public class EnemyPatrol : MonoBehaviour
         float distanceToPlayer = Vector2.Distance(player.position,transform.position);
         if(distanceToPlayer > detectionRange)
         {
+            if (isChasing)
+            {
+                // Jika sedang mengejar, hentikan chase
+                isChasing = false;
+                audioManager.StopSFX();
+            }
             if (movingRight)
             {
                 transform.Translate(Vector2.right * stat.speed * Time.deltaTime);
@@ -68,6 +72,12 @@ public class EnemyPatrol : MonoBehaviour
 
             FlipSprite();
         }else{
+            if (!isChasing)
+            {
+                // Jika tidak sedang mengejar, mulai mengejar dan putar sound SFX
+                isChasing = true;
+                audioManager.PlaySFX(audioManager.enemy);
+            }
             ChasePlayer(distanceToPlayer);
         }
         

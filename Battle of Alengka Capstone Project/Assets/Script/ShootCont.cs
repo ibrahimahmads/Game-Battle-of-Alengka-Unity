@@ -7,8 +7,9 @@ using UnityEngine;
 
 public class ShootCont : MonoBehaviour
 {
-
+    AudioManager audioManager;
     PlayerStat stat;
+    Player_Mov playerMov;
     public GameObject arrow;
     public Transform Bow;
     public float arrowSpeed;
@@ -18,10 +19,12 @@ public class ShootCont : MonoBehaviour
     private bool att = false;
     Animator animator;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         currentCD = 0;
         stat = GetComponent<PlayerStat>();
+        playerMov = GetComponent<Player_Mov>();
         animator = GetComponent<Animator>();
     }
     // Update is called once per frame
@@ -32,6 +35,7 @@ public class ShootCont : MonoBehaviour
 
     void Attack()
     {
+        if (!playerMov.isgrounded) return;
         currentCD -= Time.deltaTime;
         if(currentCD <= 0)
         {
@@ -60,8 +64,10 @@ public class ShootCont : MonoBehaviour
                 if(timeChrg>= 1)
                 {
                     ChargedAtt();
+                    audioManager.PlaySFX(audioManager.panah);
                 }else{
                     RegularShoot();
+                    audioManager.PlaySFX(audioManager.panah);
                 }
 
                 att = false;
@@ -91,15 +97,17 @@ public class ShootCont : MonoBehaviour
 
     void RegularShoot()
     {
-        FireArrow(stat.arrowFixedSpeed);
+        float speed = stat.arrowFixedSpeed;
+        FireArrow(speed);
     }
 
     void ChargedAtt()
     {
-        FireArrow(stat.arrowFixedSpeed*2);
+        float speed = stat.arrowFixedSpeed * 2;
+        FireArrow(speed);
     }
 
-    void FireArrow(float speed)
+    public void FireArrow(float speed)
     {
         if (arrow != null && Bow != null)
         {

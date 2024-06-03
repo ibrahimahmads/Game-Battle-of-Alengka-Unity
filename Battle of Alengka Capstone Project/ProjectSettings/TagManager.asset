@@ -10,6 +10,8 @@ TagManager:
   - Achievement
   - Arrow
   - Trigger
+  - Audio
+  - Boss
   layers:
   - Default
   - TransparentFX
