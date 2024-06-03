@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 1466172103297139000}
   - component: {fileID: 6144363318475439077}
   m_Layer: 7
-  m_Name: Player
+  m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,7 +218,7 @@ MonoBehaviour:
   speed: 5
   jumpPower: 8
   health: 10
-  cdAttack: 2
+  cdAttack: 1
   arrowFixedSpeed: 8
   maxTimeChrg: 2
   maxArrowSpeed: 16
