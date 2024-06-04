@@ -53,7 +53,7 @@ public class DialogueBox : MonoBehaviour
             if(DialogueIndex == DialogueSegments.Length)
             {
                 gameObject.SetActive(false);
-                GameManager.instance.LoadScene(1);
+                GameManager.instance.LoadScene(2);
                 return;
             }
 
