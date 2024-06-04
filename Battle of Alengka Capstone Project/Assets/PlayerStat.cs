@@ -100,7 +100,7 @@ public class PlayerStat : MonoBehaviour
     {
         if (collision.CompareTag("Achievement" )&& Input.GetKeyDown(KeyCode.F))
         {
-            m_GameManager.achievement1 = true;
+            m_GameManager.achievement[0] = true;
             Destroy(collision.gameObject);
         }
     }
