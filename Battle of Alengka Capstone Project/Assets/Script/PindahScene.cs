@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class PindahScene : MonoBehaviour
 {
+    public GameObject dialogPanel;
+    private void Start()
+    {
+        if (dialogPanel != null)
+        {
+            dialogPanel.SetActive(false);
+        }
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            GameManager.instance.spawnPointDirection = "left";
-            GameManager.instance.LoadScene(1);
+            // Aktifkan panel dialog
+            if (dialogPanel != null)
+            {
+                dialogPanel.SetActive(true);
+            }
         }
     }
 }

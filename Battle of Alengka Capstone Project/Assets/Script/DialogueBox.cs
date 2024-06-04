@@ -20,24 +20,40 @@ public class DialogueBox : MonoBehaviour
     public int DialogueIndex;
     public bool canCont;
 
+    Player_Mov move_player;
+    ShootCont shoot_player;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        move_player = FindAnyObjectByType<Player_Mov>();
+        shoot_player = FindAnyObjectByType<ShootCont>();
         SetStyle(DialogueSegments[0].Speaker);
         StartCoroutine(PlayDialogue(DialogueSegments[0].Dialogue));
+        Time.timeScale = 0;
+        if(move_player != null)
+        {
+            move_player.enabled = false;
+        }
+        if(shoot_player != null)
+        {
+            shoot_player.enabled = false;
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
         SkipIndicator.enabled = canCont;
-        if(Input.GetKeyDown(KeyCode.Space) && canCont)
+        if(Input.GetButtonDown("Fire1") && canCont)
         {
             DialogueIndex++;
             if(DialogueIndex == DialogueSegments.Length)
             {
                 gameObject.SetActive(false);
+                GameManager.instance.LoadScene(1);
                 return;
             }
 
@@ -74,7 +90,7 @@ public class DialogueBox : MonoBehaviour
         for(int i = 0; i < Dialogue.Length; i++)
         {
             DialogueDis.text += Dialogue[i];
-            yield return new WaitForSeconds(1f / TextSpeed);
+            yield return new WaitForSecondsRealtime(1f / TextSpeed);
         }
         canCont = true;
     }

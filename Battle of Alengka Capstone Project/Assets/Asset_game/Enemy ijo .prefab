@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
-  damage: 2
+  damage: 1
   speed: 3
   playerLayer:
     serializedVersion: 2
