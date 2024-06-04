@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerStat : MonoBehaviour
 {
+    LifeCount m_LifeCount;
+    GameManager m_GameManager;
+
     public float speed;
     public float jumpPower;
     public int health;
@@ -30,17 +33,25 @@ public class PlayerStat : MonoBehaviour
         color = GetComponent<SpriteRenderer>();
         originalColor = color.color;
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        m_LifeCount = FindObjectOfType<LifeCount>();
+        m_LifeCount.life = health;
+        m_GameManager = FindAnyObjectByType<GameManager>();
     }
     private void Update()
     {
         Invincible();
         MouseCheck();
+
     }
+
+
+    
     public void TakeDamage(int damage)
     {
         if (!isInvincible)
         {
             health -= damage;
+            m_LifeCount.LifeDecrease();
             currentInvincibility = invincibilityDur;
             isInvincible = true;
             if (health <= 0)
@@ -89,6 +100,7 @@ public class PlayerStat : MonoBehaviour
     {
         if (collision.CompareTag("Achievement" )&& Input.GetKeyDown(KeyCode.F))
         {
+            m_GameManager.achievement1 = true;
             Destroy(collision.gameObject);
         }
     }
