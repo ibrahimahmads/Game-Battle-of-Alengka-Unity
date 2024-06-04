@@ -145,11 +145,11 @@ PrefabInstance:
       objectReference: {fileID: 720546351}
     - target: {fileID: 1902658608759329946, guid: 336eb099a180b0247b2e7cbec195789a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 84.43
+      value: -24.6
       objectReference: {fileID: 0}
     - target: {fileID: 1902658608759329946, guid: 336eb099a180b0247b2e7cbec195789a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.75
+      value: 2.73
       objectReference: {fileID: 0}
     - target: {fileID: 1902658608759329946, guid: 336eb099a180b0247b2e7cbec195789a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1934,7 +1934,7 @@ MonoBehaviour:
   - Speaker: {fileID: 11400000, guid: c540ee12c04f7a34ea32a3c61d23a3d4, type: 2}
     Dialogue: '"Sama - sama , Selanjutnya apa yang harus ku lakukan wahai parabetapa?"'
   - Speaker: {fileID: 11400000, guid: 10443faf12542e6468240e5503ebec1f, type: 2}
-    Dialogue: '" pergilah ke mitila ibu kata dari kerajaan wideha yang dipimpin oleh
+    Dialogue: '" pergilah ke mitila ibukota dari kerajaan wideha yang dipimpin oleh
       Raja janaka ,beliau sedang membuat sayembara... ikutlah engkau sayembara tersebut"'
   - Speaker: {fileID: 11400000, guid: c540ee12c04f7a34ea32a3c61d23a3d4, type: 2}
     Dialogue: '" Baik parabetapa "'

@@ -315,13 +315,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueSegments:
   - Speaker: {fileID: 11400000, guid: 10443faf12542e6468240e5503ebec1f, type: 2}
-    Dialogue: '" Terimakasih telah membantu kami untuk membunuh raksasi tataka"'
+    Dialogue: '" Terimakasih telah membantu kami untuk membunuh raksasa tataka"'
   - Speaker: {fileID: 11400000, guid: c540ee12c04f7a34ea32a3c61d23a3d4, type: 2}
     Dialogue: '"Sama - sama , Selanjutnya apa yang harus ku lakukan wahai parabetapa?"'
   - Speaker: {fileID: 11400000, guid: 10443faf12542e6468240e5503ebec1f, type: 2}
-    Dialogue: "\" pergilah ke mitila ibu kata dari kerajaan wideha yang dipimpin
-      oleh Raja janaka ,  \t    beliau sedang membuat sayembara... ikutlah engkau
-      sayembara tersebut\""
+    Dialogue: '" pergilah ke mitila ibukota dari kerajaan wideha yang dipimpin oleh
+      Raja janaka , beliau sedang membuat sayembara... ikutlah engkau sayembara tersebut"'
   - Speaker: {fileID: 11400000, guid: c540ee12c04f7a34ea32a3c61d23a3d4, type: 2}
     Dialogue: '" Baik parabetapa "'
   SpeakerFace: {fileID: 378220514}
@@ -676,7 +675,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '" terimakasih telah membantu kami untuk membunuh raksasi tataka"
+  m_text: '" terimakasih telah membantu kami untuk membunuh raksasa tataka"
 
 '
   m_isRightToLeft: 0
