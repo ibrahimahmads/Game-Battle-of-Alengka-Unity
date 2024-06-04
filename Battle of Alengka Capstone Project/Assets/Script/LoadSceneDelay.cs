@@ -27,4 +27,8 @@ public class LoadSceneDelay : MonoBehaviour
     {
 
     }
+
+    public void skip(){
+        SceneManager.LoadScene(TargetScene);
+    }
 }

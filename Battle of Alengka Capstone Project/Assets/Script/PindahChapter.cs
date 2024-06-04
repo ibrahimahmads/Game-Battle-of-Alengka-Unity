@@ -7,7 +7,7 @@ public class PindahChapter : MonoBehaviour
 {
     public void pindahChapter1()
     {
-        SceneManager.LoadScene("Scene1");
+        SceneManager.LoadScene("LoadingScreen1");
     }
 
     public void pindahChapter2()
