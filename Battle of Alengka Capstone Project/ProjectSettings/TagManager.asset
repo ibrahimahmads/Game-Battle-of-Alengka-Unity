@@ -12,6 +12,7 @@ TagManager:
   - Trigger
   - Audio
   - Boss
+  - SecretRoom
   layers:
   - Default
   - TransparentFX

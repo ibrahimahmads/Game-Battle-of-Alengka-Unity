@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 62.7, y: -0.18, z: 0}
-  m_LocalScale: {x: 0.113, y: 0.125, z: 1}
+  m_LocalScale: {x: 0.15, y: 0.18, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -131,6 +131,9 @@ MonoBehaviour:
   health: 10
   damage: 2
   speed: 3
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &7495277505346991337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,6 +148,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrolDistance: 5
   delayTime: 2
+  detectionRange: 1
+  attackRange: 2
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!95 &1405873685553376506
 Animator:
   serializedVersion: 5
