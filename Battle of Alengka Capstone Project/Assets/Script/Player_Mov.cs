@@ -14,6 +14,7 @@ public class Player_Mov : MonoBehaviour
     private bool isWalking = false;
     public LayerMask groundlayer;
     public float distanceGr;
+    public float increasedJumpPower = 2f;
 
     Animator animator;  
     // Start is called before the first frame update
@@ -95,5 +96,21 @@ public class Player_Mov : MonoBehaviour
     {
         animator.SetFloat("Moving", Mathf.Abs( moveX));
         animator.SetBool("OnGround", isgrounded);
+    }
+
+     void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("JumpBoost"))
+        {
+            stat.jumpPower = stat.jumpPower + increasedJumpPower;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.CompareTag("JumpBoost"))
+        {
+            stat.jumpPower = stat.jumpPower - increasedJumpPower;
+        }
     }
 }
