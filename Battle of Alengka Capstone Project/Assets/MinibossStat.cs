@@ -49,7 +49,7 @@ public class MinibossStat : MonoBehaviour
         // Tunggu hingga animasi Death selesai
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
 
-        Destroy(gameObject,0.2f);
+        Destroy(gameObject,0.3f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -7,12 +7,14 @@ public class HouseCont : MonoBehaviour
 {
     public GameObject housePrefab; // Prefab house yang akan dibuat
     public GameObject door;
+    public GameObject hintMisi;
     public TextMeshProUGUI buildText;
     public TextMeshProUGUI warningText;
-    public TextMeshProUGUI hintText;
+    public TextMeshProUGUI misiRumahIsDone;
     public Transform buildPoint; // Titik di mana rumah akan dibangun
     private bool isPlayerInRange = false; // Apakah player dalam jangkauan trigger
     private bool isBuilding = false; // Apakah proses pembangunan sedang berlangsung
+    public bool isDoneBuild = false;
 
     void Update()
     {
@@ -44,6 +46,11 @@ public class HouseCont : MonoBehaviour
             if (CheckMaterials())
             {
                 StartCoroutine(BuildHouse());
+                if(isDoneBuild)
+                {
+                    misiRumahIsDone.text = "DONE";
+                    hintMisi.SetActive(true);
+                }
             }
             else
             {
@@ -70,6 +77,7 @@ public class HouseCont : MonoBehaviour
     IEnumerator BuildHouse()
     {
         isBuilding = true;
+        isDoneBuild = true;
         // Tampilkan animasi pembuatan rumah (animasi pada HouseTrigger)
         Animator animator = GetComponent<Animator>();
         animator.SetTrigger("Build"); // Pastikan ada parameter trigger "Build" di Animator
@@ -82,10 +90,6 @@ public class HouseCont : MonoBehaviour
         GameObject newHouse = Instantiate(housePrefab, buildPoint.position, Quaternion.identity);
         newHouse.transform.position = new Vector3(223.358f, 2.87f, buildPoint.position.z);
         door.transform.position = new Vector3(216f, 1f, 1f);
-
-        hintText.enabled = true;
-        yield return new WaitForSeconds(4f);
-        hintText.enabled = false;
         
         gameObject.SetActive(false);
         isBuilding = false;

@@ -2613,6 +2613,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 720546350}
+  pausePanel: {fileID: 1014852298}
+  questPanel: {fileID: 0}
 --- !u!114 &720546352
 MonoBehaviour:
   m_ObjectHideFlags: 0

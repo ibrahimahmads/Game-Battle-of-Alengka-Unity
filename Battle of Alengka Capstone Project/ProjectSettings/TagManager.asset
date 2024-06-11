@@ -14,6 +14,7 @@ TagManager:
   - Boss
   - SecretRoom
   - JumpBoost
+  - GroundFall
   layers:
   - Default
   - TransparentFX

@@ -9,6 +9,10 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI daunText;
     public TextMeshProUGUI kayuText;
     public TextMeshProUGUI batuText;
+    public TextMeshProUGUI misiBoxIsDone;
+    public TextMeshProUGUI misiRumahIsDone;
+    public GameObject misiBox;
+    public GameObject misiRumah;
 
     private int daunCount = 0;
     private int kayuCount = 0;
@@ -35,29 +39,45 @@ public class ScoreManager : MonoBehaviour
                 batuText.text = batuCount + "/1";
                 break;
         }
+
+        if(daunCount == 1 && kayuCount == 1 && batuCount == 1)
+        {
+            misiBox.SetActive(true);
+        }
     }
 
     public void SubmitItems()
     {
          if (daunCount == 1)
-    {
-        daunCount = 0;
-        daunText.text = "DONE";
-        daunIsDone = true;
-    }
-    
-    if(kayuCount == 1)
-    {
-        kayuCount = 0;
-        kayuText.text = "DONE";
-        kayuIsDone = true;
+        {
+            daunCount = 0;
+            daunText.text = "DONE";
+            daunIsDone = true;
+        }
+        
+        if(kayuCount == 1)
+        {
+            kayuCount = 0;
+            kayuText.text = "DONE";
+            kayuIsDone = true;
+        }
+
+        if(batuCount == 1)
+        {
+            batuCount = 0;
+            batuText.text = "DONE";
+            batuIsDone = true;
+        }       
+
+        if(CheckMaterials())
+        {
+            misiBoxIsDone.text = "DONE";
+            misiRumah.SetActive(true);
+        }
     }
 
-    if(batuCount == 1)
+    private bool CheckMaterials()
     {
-        batuCount = 0;
-        batuText.text = "DONE";
-        batuIsDone = true;
-    }       
+        return daunIsDone && kayuIsDone && batuIsDone;
     }
 }
