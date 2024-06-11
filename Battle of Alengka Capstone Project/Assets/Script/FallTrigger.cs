@@ -19,5 +19,9 @@ public class FallTrigger : MonoBehaviour
         {
              SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+        if(col.gameObject.CompareTag("GroundFall"))
+        {
+             Destroy(col.gameObject);
+        }
      }
 }
