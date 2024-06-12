@@ -100,8 +100,12 @@ public class PlayerStat : MonoBehaviour
     {
         if (collision.CompareTag("Achievement" )&& Input.GetKeyDown(KeyCode.F))
         {
-            m_GameManager.achievement[0] = true;
-            Destroy(collision.gameObject);
+            AchievementBase1 achievement = collision.GetComponent<AchievementBase1>();
+            if(achievement != null)
+            {
+                achievement.Unlock();
+            }
+            
         }
     }
 

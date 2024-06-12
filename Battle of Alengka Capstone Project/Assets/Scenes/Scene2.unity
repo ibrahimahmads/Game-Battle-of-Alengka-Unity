@@ -3490,6 +3490,7 @@ GameObject:
   - component: {fileID: 345979582}
   - component: {fileID: 345979581}
   - component: {fileID: 345979583}
+  - component: {fileID: 345979584}
   m_Layer: 0
   m_Name: BusurAchievement
   m_TagString: Achievement
@@ -4945,6 +4946,18 @@ PolygonCollider2D:
       - {x: -2.9947245, y: 11.538196}
       - {x: -3.039329, y: 11.523328}
   m_UseDelaunayMesh: 0
+--- !u!114 &345979584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345979579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030de0c8ec50c894ca7d65d630f8e53d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &346355644
 GameObject:
   m_ObjectHideFlags: 0
