@@ -1268,6 +1268,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1913595786}
     m_Modifications:
+    - target: {fileID: 2359341511242516137, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3878668548342541906, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_Name
       value: Enemy Merah (4)
@@ -1278,7 +1282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4520564946940768982, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.31
+      value: -2.398
       objectReference: {fileID: 0}
     - target: {fileID: 4520564946940768982, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1311,6 +1315,10 @@ PrefabInstance:
     - target: {fileID: 4520564946940768982, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8064374374580591853, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
+      propertyPath: m_BodyType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2745,6 +2753,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1913595786}
     m_Modifications:
+    - target: {fileID: 2359341511242516137, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3878668548342541906, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_Name
       value: Enemy Merah (7)
@@ -2755,7 +2767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4520564946940768982, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.17
+      value: -2.396
       objectReference: {fileID: 0}
     - target: {fileID: 4520564946940768982, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2788,6 +2800,10 @@ PrefabInstance:
     - target: {fileID: 4520564946940768982, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8064374374580591853, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
+      propertyPath: m_BodyType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5518,6 +5534,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1913595786}
     m_Modifications:
+    - target: {fileID: 2359341511242516137, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3878668548342541906, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_Name
       value: Enemy Merah (5)
@@ -5528,7 +5548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4520564946940768982, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.27
+      value: -2.427
       objectReference: {fileID: 0}
     - target: {fileID: 4520564946940768982, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5561,6 +5581,10 @@ PrefabInstance:
     - target: {fileID: 4520564946940768982, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8064374374580591853, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
+      propertyPath: m_BodyType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30930,6 +30954,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1913595786}
     m_Modifications:
+    - target: {fileID: 2359341511242516137, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3878668548342541906, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_Name
       value: Enemy Merah (6)
@@ -30940,7 +30968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4520564946940768982, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.25
+      value: -2.427
       objectReference: {fileID: 0}
     - target: {fileID: 4520564946940768982, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -30973,6 +31001,10 @@ PrefabInstance:
     - target: {fileID: 4520564946940768982, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8064374374580591853, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
+      propertyPath: m_BodyType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -38238,11 +38270,51 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 47, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 49, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 51, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 55, y: 1, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 2
       m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 59, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -38370,9 +38442,9 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 7
+  - m_RefCount: 10
     m_Data: {fileID: 11400000, guid: fa17c94fdc7149444b9ddc22af22a730, type: 2}
-  - m_RefCount: 6
+  - m_RefCount: 7
     m_Data: {fileID: 11400000, guid: 00697d763e0d7d246b533ddcc31ade3d, type: 2}
   - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 63e4ba6500ba68248bfe104c6603cd3a, type: 2}
@@ -38381,9 +38453,9 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileSpriteArray:
-  - m_RefCount: 7
+  - m_RefCount: 10
     m_Data: {fileID: 21300000, guid: 8fa906bf22110db41b0657926db7057c, type: 3}
-  - m_RefCount: 6
+  - m_RefCount: 7
     m_Data: {fileID: 21300000, guid: 80547e1bc0c6dd441bb4241c908cd9f8, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: 21300000, guid: daf92f546830a704384e130a800d61ad, type: 3}
@@ -38392,7 +38464,7 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileMatrixArray:
-  - m_RefCount: 18
+  - m_RefCount: 22
     m_Data:
       e00: 1
       e01: 0
@@ -38411,7 +38483,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 18
+  - m_RefCount: 22
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -45243,6 +45315,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1913595786}
     m_Modifications:
+    - target: {fileID: 2359341511242516137, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3878668548342541906, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_Name
       value: Enemy Merah (3)
@@ -45253,7 +45329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4520564946940768982, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.26
+      value: -12.407
       objectReference: {fileID: 0}
     - target: {fileID: 4520564946940768982, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -45290,6 +45366,10 @@ PrefabInstance:
     - target: {fileID: 7495277505346991337, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: patrolDistance
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8064374374580591853, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
+      propertyPath: m_BodyType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -47764,6 +47844,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1913595786}
     m_Modifications:
+    - target: {fileID: 2359341511242516137, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3878668548342541906, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_Name
       value: Enemy Merah (1)
@@ -47774,7 +47858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4520564946940768982, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.14
+      value: -2.426
       objectReference: {fileID: 0}
     - target: {fileID: 4520564946940768982, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -47807,6 +47891,10 @@ PrefabInstance:
     - target: {fileID: 4520564946940768982, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8064374374580591853, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
+      propertyPath: m_BodyType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -49083,6 +49171,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1913595786}
     m_Modifications:
+    - target: {fileID: 2359341511242516137, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3878668548342541906, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_Name
       value: Enemy Merah
@@ -49093,7 +49185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4520564946940768982, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1
+      value: -2.43
       objectReference: {fileID: 0}
     - target: {fileID: 4520564946940768982, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -49126,6 +49218,10 @@ PrefabInstance:
     - target: {fileID: 4520564946940768982, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8064374374580591853, guid: 3ca3699cdfda96b46b9c039e962b8b8f, type: 3}
+      propertyPath: m_BodyType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
