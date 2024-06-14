@@ -9,7 +9,6 @@ public class MinibossStat : MonoBehaviour
     public int damage;
     public int speed;
     private Animator animator;
-    private bool isTakingDamage = false; // Flag untuk mengecek apakah sedang dalam keadaan terkena serangan
     private EnemyPatrol enemyPatrol;
     public LayerMask playerLayer;
 
@@ -52,13 +51,7 @@ public class MinibossStat : MonoBehaviour
         Destroy(gameObject,0.3f);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            
-        }
-    }
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (((1 << collision.gameObject.layer) & playerLayer) != 0)

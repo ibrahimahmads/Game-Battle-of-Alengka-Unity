@@ -10,6 +10,7 @@ public class NPCFacing : MonoBehaviour
     void Update()
     {
         //if player left to enemy then scale =1 
+        if(Player != null)
         if(Player.position.x < transform.position.x)
         {
             transform.localScale = new Vector3(1,1,1);
