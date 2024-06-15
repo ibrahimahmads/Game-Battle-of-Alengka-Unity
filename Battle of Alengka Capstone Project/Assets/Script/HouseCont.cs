@@ -8,9 +8,7 @@ public class HouseCont : MonoBehaviour
     public GameObject housePrefab; // Prefab house yang akan dibuat
     public GameObject door;
     public GameObject hintMisi;
-    public TextMeshProUGUI buildText;
-    public TextMeshProUGUI warningText;
-    public TextMeshProUGUI misiRumahIsDone;
+    public Message message;
     public Transform buildPoint; // Titik di mana rumah akan dibangun
     private bool isPlayerInRange = false; // Apakah player dalam jangkauan trigger
     private bool isBuilding = false; // Apakah proses pembangunan sedang berlangsung
@@ -26,7 +24,7 @@ public class HouseCont : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = true;
-            buildText.enabled = true;
+            message.ShowMessage("PRESS F TO BUILD");
         }
     }
 
@@ -35,7 +33,7 @@ public class HouseCont : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = false;
-            buildText.enabled = false;
+            message.FinishMessage();
         }
     }
 
@@ -48,7 +46,7 @@ public class HouseCont : MonoBehaviour
                 StartCoroutine(BuildHouse());
                 if(isDoneBuild)
                 {
-                    misiRumahIsDone.text = "DONE";
+                    message.ShowMessage("DONE");
                     hintMisi.SetActive(true);
                 }
             }
@@ -67,11 +65,10 @@ public class HouseCont : MonoBehaviour
 
     IEnumerator tampilWarning()
     {
-        buildText.enabled = false;
-        warningText.enabled = true;
+
+        message.ShowMessage("MATERIAL BELUM TERKUMPUL SEMUA");
         yield return new WaitForSeconds(1.5f); 
-        warningText.enabled = false;
-        buildText.enabled = true;
+        message.ShowMessage("PRESS F TO BUILD");
     }
 
     IEnumerator BuildHouse()
@@ -81,7 +78,7 @@ public class HouseCont : MonoBehaviour
         // Tampilkan animasi pembuatan rumah (animasi pada HouseTrigger)
         Animator animator = GetComponent<Animator>();
         animator.SetTrigger("Build"); // Pastikan ada parameter trigger "Build" di Animator
-        buildText.enabled = false;
+        message.FinishMessage();
 
         // Tunggu selama animasi pembuatan rumah (sesuaikan dengan durasi animasi Anda)
         yield return new WaitForSeconds(0.7f); // Ubah waktu sesuai dengan durasi animasi Anda
