@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7495277505346991337}
   - component: {fileID: 1405873685553376506}
   - component: {fileID: 2359341511242516137}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy Merah
   m_TagString: Enemy
   m_Icon: {fileID: 0}

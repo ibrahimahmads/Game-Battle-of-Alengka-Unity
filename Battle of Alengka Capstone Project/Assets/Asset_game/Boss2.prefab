@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7360443248592228881}
   - component: {fileID: 4167113342906428724}
   - component: {fileID: 303047756587101529}
+  - component: {fileID: 2757863682989983573}
   - component: {fileID: 2625393475413167872}
   - component: {fileID: 1735656503828602010}
   m_Layer: 0
@@ -135,6 +136,24 @@ MonoBehaviour:
   distance: 10
   playerNear: 0
   fireballSpawnPoint: {fileID: 0}
+--- !u!114 &2757863682989983573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8814536033663135569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d9ce0c55460d542a22287211f3a2f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
+  damage: 4
+  speed: 3
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!95 &2625393475413167872
 Animator:
   serializedVersion: 5

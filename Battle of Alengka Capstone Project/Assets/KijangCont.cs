@@ -7,8 +7,10 @@ public class KijangCont : MonoBehaviour
 {
     public LayerMask player;
     bool PlayerNear;
+    bool runs;
     public float distancePlayer;
     public float speed;
+    public float lastPosition;
 
     Animator animator;
     // Start is called before the first frame update
@@ -26,12 +28,16 @@ public class KijangCont : MonoBehaviour
     void PlayerCheck()
     {
         PlayerNear = Physics2D.Raycast(transform.position, Vector2.left, distancePlayer, player);
+        if(PlayerNear == true)
+        {
+            runs = true;
+        }
     }
 
     void Run()
     {
         PlayerCheck();
-        if(PlayerNear == true)
+        if(runs == true && transform.position.x< lastPosition)
         {
             transform.Translate(new Vector2(1,0) * speed * Time.deltaTime);
             animator.SetBool("Near", true);
@@ -42,12 +48,5 @@ public class KijangCont : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Arrow"))
-        {
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
-        }
-    }
+    
 }
