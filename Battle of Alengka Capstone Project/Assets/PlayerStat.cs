@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerStat : MonoBehaviour
@@ -23,6 +24,8 @@ public class PlayerStat : MonoBehaviour
     float currentInvincibility;
     bool isInvincible;
     public GameOverManager gameOverManager;
+
+    public Message message;
 
     private Camera mainCam;
     public Vector3 mousePos;
@@ -90,21 +93,34 @@ public class PlayerStat : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Achievement"))
+        {
+            message.ShowMessage("PRESS F TO TAKE");
+        }
         if (collision.CompareTag("Spike"))
         {
             TakeDamage(3);
         }
         
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Achievement"))
+        {
+            message.FinishMessage();
+        }
+    }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Achievement" )&& Input.GetKeyDown(KeyCode.F))
+        if (collision.CompareTag("Achievement" ))
         {
             AchievementBase1 achievement = collision.GetComponent<AchievementBase1>();
-            if(achievement != null)
-            {
-                achievement.Unlock();
-            }
+            if (Input.GetKeyDown(KeyCode.F))
+                if(achievement != null)
+                {
+                    achievement.Unlock();
+                }
             
         }
     }

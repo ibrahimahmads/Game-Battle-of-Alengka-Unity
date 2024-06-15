@@ -9,7 +9,7 @@ public class BoxCont : MonoBehaviour
     public GameObject boxClosed; // GameObject box tertutup
     public GameObject boxOpen; // GameObject box terbuka
     public ScoreManager scoreManager; // Skrip ScoreManager
-    public TextMeshProUGUI submitText;
+    public Message submitText;
     private bool isOpen = false; // Status box terbuka atau tertutup
 
     void Update()
@@ -38,7 +38,7 @@ public class BoxCont : MonoBehaviour
         isOpen = true;
         boxClosed.SetActive(false);
         boxOpen.SetActive(true);
-        submitText.enabled =true; 
+        submitText.ShowMessage("PRESS F TO SUBMIT"); 
     }
 
     void CloseBox()
@@ -46,7 +46,7 @@ public class BoxCont : MonoBehaviour
         isOpen = false;
         boxOpen.SetActive(false);
         boxClosed.SetActive(true);
-        submitText.enabled =false;
+        submitText.FinishMessage();
     }
 
     public void SubmitItems()
@@ -55,6 +55,7 @@ public class BoxCont : MonoBehaviour
         {
             // Serahkan item-item yang dikumpulkan
             scoreManager.SubmitItems();
+            CloseBox();
         }
     }
 }
