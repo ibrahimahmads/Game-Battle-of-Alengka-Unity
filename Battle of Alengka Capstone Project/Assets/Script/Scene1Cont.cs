@@ -65,3 +65,4 @@ public class Scene1Cont : MonoBehaviour
         // SceneManager.LoadScene("NamaScenePermainan"); // Contoh jika ingin memuat scene baru
     }
 }
+

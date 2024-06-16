@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3995805308459383181}
   - component: {fileID: 4477583206971746627}
   - component: {fileID: 1125983359809352469}
-  - component: {fileID: 8840676077323706344}
+  - component: {fileID: 2154427613769177719}
   m_Layer: 0
   m_Name: ArrowChivement
   m_TagString: Achievement
@@ -131,7 +131,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.07, y: 3.1}
   m_EdgeRadius: 0
---- !u!114 &8840676077323706344
+--- !u!114 &2154427613769177719
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

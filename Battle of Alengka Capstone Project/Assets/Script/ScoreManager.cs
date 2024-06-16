@@ -11,6 +11,7 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI batuText;
     public TextMeshProUGUI misiBoxIsDone;
     public TextMeshProUGUI misiRumahIsDone;
+    public TextMeshProUGUI alert;
     public GameObject misiBox;
     public GameObject misiRumah;
 
@@ -43,6 +44,7 @@ public class ScoreManager : MonoBehaviour
         if(daunCount == 1 && kayuCount == 1 && batuCount == 1)
         {
             misiBox.SetActive(true);
+            TriggerAlert();
         }
     }
 
@@ -73,11 +75,24 @@ public class ScoreManager : MonoBehaviour
         {
             misiBoxIsDone.text = "DONE";
             misiRumah.SetActive(true);
+            TriggerAlert();
         }
     }
 
     private bool CheckMaterials()
     {
         return daunIsDone && kayuIsDone && batuIsDone;
+    }
+
+    IEnumerator tampilAlert()
+    {
+        alert.enabled = true;
+        yield return new WaitForSeconds(3f); 
+        alert.enabled = false;
+    }
+
+    public void TriggerAlert()
+    {
+        StartCoroutine(tampilAlert());
     }
 }

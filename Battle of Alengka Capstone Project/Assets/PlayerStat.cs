@@ -11,7 +11,6 @@ public class PlayerStat : MonoBehaviour
     public float speed;
     public float jumpPower;
     public int health;
-
     public float cdAttack;
     public float arrowFixedSpeed;
     public float maxTimeChrg;
@@ -24,12 +23,10 @@ public class PlayerStat : MonoBehaviour
     float currentInvincibility;
     bool isInvincible;
     public GameOverManager gameOverManager;
-
-    public Message message;
-
     private Camera mainCam;
     public Vector3 mousePos;
     private Vector3 dir;
+    public Message message;
 
     private void Start()
     {
@@ -44,11 +41,7 @@ public class PlayerStat : MonoBehaviour
     {
         Invincible();
         MouseCheck();
-
     }
-
-
-    
     public void TakeDamage(int damage)
     {
         if (!isInvincible)
@@ -93,38 +86,23 @@ public class PlayerStat : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Achievement"))
+        if(collision.CompareTag("Achievement"))
         {
-            message.ShowMessage("PRESS F TO TAKE");
+            message.ShowMessage("PRESS [F] TO TAKE");
         }
         if (collision.CompareTag("Spike"))
         {
             TakeDamage(3);
         }
-        
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerExit2D(Collider2D other)
     {
-        if (collision.CompareTag("Achievement"))
+        if (other.CompareTag("Achievement"))
         {
             message.FinishMessage();
         }
     }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Achievement" ))
-        {
-            AchievementBase1 achievement = collision.GetComponent<AchievementBase1>();
-            if (Input.GetKeyDown(KeyCode.F))
-                if(achievement != null)
-                {
-                    achievement.Unlock();
-                }
-            
-        }
-    }
-
     void MouseCheck()
     {
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);

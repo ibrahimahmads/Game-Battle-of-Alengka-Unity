@@ -11,7 +11,6 @@ public class AchievementCont : MonoBehaviour
     void Start()
     {
         gameManager = FindAnyObjectByType<GameManager>();
-        
     }
 
     // Update is called once per frame
@@ -22,9 +21,6 @@ public class AchievementCont : MonoBehaviour
 
     void HasBeenTaken()
     {
-        
-        
-        
         for (int i = 0; i < setArr.Length; i++)
         {
             Color color = setArr[i].color;
@@ -35,9 +31,6 @@ public class AchievementCont : MonoBehaviour
                 color.a = 255;
                 setArr[i].color = color;
             }
-            
-
-
         }
 
     }

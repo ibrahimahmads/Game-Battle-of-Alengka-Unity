@@ -12,6 +12,7 @@ public class LoadSceneDelay : MonoBehaviour
 
     void LoadScene()
     {
+        Time.timeScale = 1.0f;
         //Melakukan perpindahan antar scene. Catatan: Scene yang dipanggil sudah didaftarkan di Build Setting
         SceneManager.LoadScene(TargetScene);
     }
