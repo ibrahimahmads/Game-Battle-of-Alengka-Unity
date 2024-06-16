@@ -1620,7 +1620,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "THE BATTLE OF \nALENGKA"
+  m_text: "BATTLE \nOF ALENGKA"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f49c67e66fe228644b1fe91b495645b9, type: 2}
   m_sharedMaterial: {fileID: 5610087410944391614, guid: f49c67e66fe228644b1fe91b495645b9, type: 2}
@@ -1630,7 +1630,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278873236
-  m_fontColor: {r: 0.5803922, g: 0.42352942, b: 0.039215688, a: 1}
+  m_fontColor: {r: 0.5803922, g: 0.42352945, b: 0.039215688, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

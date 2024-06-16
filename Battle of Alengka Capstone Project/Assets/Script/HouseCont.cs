@@ -5,14 +5,16 @@ using UnityEngine.UI;
 using TMPro;
 public class HouseCont : MonoBehaviour
 {
-    public GameObject housePrefab; // Prefab house yang akan dibuat
+    public GameObject housePrefab; 
     public GameObject door;
     public GameObject hintMisi;
     public Message message;
+    public ScoreManager scoreManager;
     public Transform buildPoint; // Titik di mana rumah akan dibangun
     private bool isPlayerInRange = false; // Apakah player dalam jangkauan trigger
     private bool isBuilding = false; // Apakah proses pembangunan sedang berlangsung
     public bool isDoneBuild = false;
+    public TextMeshProUGUI misiRumahIsDone;
 
     void Update()
     {
@@ -24,7 +26,7 @@ public class HouseCont : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = true;
-            message.ShowMessage("PRESS F TO BUILD");
+            message.ShowMessage("PRESS [F] TO BUILD");
         }
     }
 
@@ -46,8 +48,9 @@ public class HouseCont : MonoBehaviour
                 StartCoroutine(BuildHouse());
                 if(isDoneBuild)
                 {
-                    message.ShowMessage("DONE");
+                    misiRumahIsDone.text = "DONE";
                     hintMisi.SetActive(true);
+                    scoreManager.TriggerAlert();
                 }
             }
             else
@@ -65,10 +68,9 @@ public class HouseCont : MonoBehaviour
 
     IEnumerator tampilWarning()
     {
-
         message.ShowMessage("MATERIAL BELUM TERKUMPUL SEMUA");
         yield return new WaitForSeconds(1.5f); 
-        message.ShowMessage("PRESS F TO BUILD");
+        message.ShowMessage("PRESS \"F\" TO BUILD");
     }
 
     IEnumerator BuildHouse()

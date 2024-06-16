@@ -2841,7 +2841,7 @@ GameObject:
   - component: {fileID: 277601018}
   - component: {fileID: 277601017}
   m_Layer: 5
-  m_Name: Canvas (1)
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7223,6 +7223,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   achievement1: {fileID: 0}
   position1: {fileID: 0}
+  tutorialPanel: {fileID: 0}
+  image1: {fileID: 0}
+  image2: {fileID: 0}
 --- !u!1 &584225110
 GameObject:
   m_ObjectHideFlags: 0

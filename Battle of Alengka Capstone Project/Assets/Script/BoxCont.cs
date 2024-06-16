@@ -38,7 +38,7 @@ public class BoxCont : MonoBehaviour
         isOpen = true;
         boxClosed.SetActive(false);
         boxOpen.SetActive(true);
-        submitText.ShowMessage("PRESS F TO SUBMIT"); 
+        submitText.ShowMessage("PRESS [F] TO SUBMIT"); 
     }
 
     void CloseBox()
