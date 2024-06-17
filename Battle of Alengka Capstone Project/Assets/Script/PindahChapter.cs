@@ -28,4 +28,6 @@ public class PindahChapter : MonoBehaviour
         UnpauseGame();
         SceneManager.LoadScene("Scene3");
     }
+
+
 }

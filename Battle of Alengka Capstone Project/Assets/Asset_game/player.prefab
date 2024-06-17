@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 7698248697732896196}
   - component: {fileID: 5080888828729346884}
   - component: {fileID: 1466172103297139000}
-  - component: {fileID: 6144363318475439077}
+  - component: {fileID: 8475145516189504058}
   m_Layer: 7
   m_Name: player
   m_TagString: Player
@@ -187,6 +187,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   distanceGr: 2
+  increasedJumpPower: 2
 --- !u!114 &5080888828729346884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,7 +226,8 @@ MonoBehaviour:
   invincibilityDur: 1
   gameOverManager: {fileID: 0}
   mousePos: {x: 0, y: 0, z: 0}
---- !u!60 &6144363318475439077
+  message: {fileID: 0}
+--- !u!60 &8475145516189504058
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -269,10 +271,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.61, y: -1.9375}
-      - {x: 0.615, y: -1.9074999}
-      - {x: 0.55, y: -1.8774999}
-      - {x: 0.45, y: -1.8275}
+    - - {x: 0.33877987, y: -1.8018272}
+      - {x: 0.3333498, y: -1.781877}
+      - {x: 0.32572478, y: -1.7920765}
+      - {x: 0.3404699, y: -1.8023754}
       - {x: 0.33499998, y: -1.7925}
       - {x: 0.325, y: -1.7524999}
       - {x: 0.28, y: -1.7075}
@@ -430,12 +432,12 @@ PolygonCollider2D:
       - {x: -0.265, y: -1.8275}
       - {x: -0.225, y: -1.7975}
       - {x: -0.21, y: -1.8475}
-      - {x: -0.19, y: -1.9375}
-      - {x: -0.155, y: -1.9825}
-      - {x: -0.12, y: -1.9975}
-      - {x: 0.235, y: -1.9975}
-      - {x: 0.255, y: -1.9925}
-      - {x: 0.575, y: -1.9875}
+      - {x: -0.19521743, y: -1.816902}
+      - {x: -0.11327494, y: -1.8116529}
+      - {x: -0.109567516, y: -1.8015285}
+      - {x: 0.17241241, y: -1.806553}
+      - {x: 0.22892243, y: -1.7864786}
+      - {x: 0.33507487, y: -1.8015782}
     - - {x: 0.08, y: -1.8425}
       - {x: 0.08, y: -1.8475}
       - {x: 0.07, y: -1.8525}
