@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
     public Transform playerSpawnPoint;
     public string spawnPointDirection = "left";
     public GameObject Player;
-    public bool[] achievement = new bool[3];
+    public bool[] achievement = new bool[4];
+    public bool[] currentLevel = new bool[4];
 
     void Awake()
     {
@@ -22,6 +23,8 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+
+        currentLevel[0] = true;
     }
 
     public void LoadScene(int sceneIndex)
@@ -33,5 +36,10 @@ public class GameManager : MonoBehaviour
     {
         //GameObject.FindGameObjectWithTag("Player").transform.position = playerSpawnPoint.position;
         Instantiate(Player, playerSpawnPoint.position, Quaternion.identity);
+    }
+
+    public void UnlockNextLevel(int value)
+    {
+        currentLevel[value] = true;
     }
 }

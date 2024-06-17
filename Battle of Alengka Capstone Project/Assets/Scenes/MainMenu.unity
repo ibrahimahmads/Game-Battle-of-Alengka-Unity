@@ -2770,7 +2770,8 @@ MonoBehaviour:
   playerSpawnPoint: {fileID: 0}
   spawnPointDirection: left
   Player: {fileID: 6082821151322044943, guid: b2dec2d7ecc8da14fa7f108dbf5bd859, type: 3}
-  achievement: 000000
+  achievement: 00000000
+  currentLevel: 01010101
 --- !u!4 &2114152606
 Transform:
   m_ObjectHideFlags: 0

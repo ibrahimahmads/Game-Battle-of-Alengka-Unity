@@ -13,6 +13,8 @@ public class Scene1Cont : MonoBehaviour
     public Image image2;
     private int currentImageIndex = 0;
 
+    public GameObject dialogPanel;
+
     ShootCont shoot_player;
 
     void Start()
@@ -54,6 +56,10 @@ public class Scene1Cont : MonoBehaviour
                 StartGame();
             }
         }
+        if(dialogPanel.activeSelf == true)
+        {
+            GameManager.instance.UnlockNextLevel(1);
+        }
     }
     void StartGame()
     {
@@ -64,5 +70,7 @@ public class Scene1Cont : MonoBehaviour
         // Mulai permainan, misalnya dengan memuat scene baru atau mengaktifkan objek permainan
         // SceneManager.LoadScene("NamaScenePermainan"); // Contoh jika ingin memuat scene baru
     }
+
+
 }
 
