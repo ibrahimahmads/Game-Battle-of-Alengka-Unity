@@ -1629,8 +1629,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278873236
-  m_fontColor: {r: 0.5803922, g: 0.42352945, b: 0.039215688, a: 1}
+    rgba: 4291480273
+  m_fontColor: {r: 0.8207547, g: 0.7936543, b: 0.7936543, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2771,7 +2771,7 @@ MonoBehaviour:
   spawnPointDirection: left
   Player: {fileID: 6082821151322044943, guid: b2dec2d7ecc8da14fa7f108dbf5bd859, type: 3}
   achievement: 00000000
-  currentLevel: 01010101
+  currentLevel: 00000000
 --- !u!4 &2114152606
 Transform:
   m_ObjectHideFlags: 0
