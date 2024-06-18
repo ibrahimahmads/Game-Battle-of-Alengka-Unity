@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
     public bool[] achievement = new bool[4];
     public bool[] currentLevel = new bool[4];
+    public float volmsc;
+    public float volsfx;
 
     void Awake()
     {
