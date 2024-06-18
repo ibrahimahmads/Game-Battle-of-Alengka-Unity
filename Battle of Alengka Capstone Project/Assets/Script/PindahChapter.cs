@@ -7,9 +7,7 @@ public class PindahChapter : MonoBehaviour
 {
     private void UnpauseGame()
     {
-        Time.timeScale = 1.0f;  // Mengatur waktu berjalan normal
-        // Pastikan pause menu UI disembunyikan jika ada
-        // pauseMenuUI.SetActive(false);
+        Time.timeScale = 1.0f; 
     }
     public void pindahChapter1()
     {
