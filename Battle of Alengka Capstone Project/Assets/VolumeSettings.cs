@@ -9,7 +9,7 @@ public class VolumeSettings : MonoBehaviour
     [SerializeField] private AudioMixer myMixer;
     [SerializeField] private Slider musicSlider;
     [SerializeField] private Slider sfxSlider;
-    
+
 
     private void Start()
     {
@@ -29,6 +29,7 @@ public class VolumeSettings : MonoBehaviour
         float volumeMusic = musicSlider.value;
         myMixer.SetFloat("music",Mathf.Log10(volumeMusic)*20);
         PlayerPrefs.SetFloat("musicVolume", volumeMusic);
+        GameManager.instance.volmsc= volumeMusic;
         
         
     }
@@ -38,6 +39,7 @@ public class VolumeSettings : MonoBehaviour
         float volumeSfx = sfxSlider.value;
         myMixer.SetFloat("sfx",Mathf.Log10(volumeSfx)*20);
         PlayerPrefs.SetFloat("sfxVolume", volumeSfx);
+        GameManager.instance.volsfx= volumeSfx;
         
     }
 

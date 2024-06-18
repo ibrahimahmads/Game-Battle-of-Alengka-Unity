@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class LoadSceneDelay : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class LoadSceneDelay : MonoBehaviour
     [Header("Main Settings")]
     public string TargetScene;
     public float Delay;
+    VideoPlayer player;
 
     void LoadScene()
     {
@@ -20,6 +22,11 @@ public class LoadSceneDelay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = FindAnyObjectByType<VideoPlayer>();
+        if(player != null)
+        {
+            player.SetDirectAudioVolume(0, GameManager.instance.volmsc);
+        }
         Invoke("LoadScene", Delay);
     }
 
