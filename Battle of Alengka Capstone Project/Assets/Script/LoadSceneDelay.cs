@@ -25,7 +25,15 @@ public class LoadSceneDelay : MonoBehaviour
         player = FindAnyObjectByType<VideoPlayer>();
         if(player != null)
         {
-            player.SetDirectAudioVolume(0, GameManager.instance.volmsc);
+            if(GameManager.instance != null)
+            {
+                player.SetDirectAudioVolume(0, GameManager.instance.volmsc);
+
+            }
+            else
+            {
+                player.SetDirectAudioVolume(0,1);
+            }
         }
         Invoke("LoadScene", Delay);
     }
